@@ -71,23 +71,23 @@ Al iniciar, el sistema muestra un menú con opciones numeradas. Ingresa el núme
 ![image](https://github.com/user-attachments/assets/c62c3ec1-d764-422f-8c7a-87bb8784f6ba)
 
 ## Uso de la aplicación (Menú por consola)
-1. **Buscar libro por título
+1. **Buscar libro por título**
 Ingresa una palabra o frase, se realiza la consulta a Gutendex, y se registra el(los) libro(s) nuevo(s) en la base.
 
-2. **Listar libros registrados
+2. **Listar libros registrados**
 Muestra todos los libros con título, idiomas, número de descargas y autores asociados.
 
-3. **Listar autores registrados
+3. **Listar autores registrados**
 Muestra todos los autores sin duplicados.
 
-4. **Listar autores vivos en un año
+4. **Listar autores vivos en un año**
 Solicita un año y filtra autores que pudieran haber vivido en dicha fecha (basado en nacimiento/fallecimiento).
 
-5. **Listar libros por idioma
+5. **Listar libros por idioma**
 Muestra los libros que incluyan el idioma ingresado (ES, EN, FR, PT, etc.).
 También se muestra la cantidad total de libros encontrados en ese idioma.
 
-6. **Salir
+6. **Salir**
 Finaliza la aplicación.
 
 ## Pruebas
