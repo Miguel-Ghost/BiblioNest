@@ -44,13 +44,6 @@ public class Autor {
         this.libros = libros;
     }
 
-    public void addLibro(Libro libro) {
-        if (!this.libros.contains(libro)) {
-            this.libros.add(libro);
-            libro.addAutor(this); // Método en la clase Libro
-        }
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -75,19 +68,23 @@ public class Autor {
         this.anioDeFallecimiento = anioDeFallecimiento;
     }
 
+    public void addLibro(Libro libro) {
+        if (!this.libros.contains(libro)) {
+            this.libros.add(libro);
+            libro.addAutor(this);
+        }
+    }
+
+
     @Override
     public String toString() {
-        // Convertimos la lista de libros a un String con sus títulos
         String librosStr = this.libros.stream()
                 .map(Libro::getTitulo)
                 .collect(Collectors.joining(", "));
 
-        // Maneja los nulos en las fechas como prefieras:
-        // p.ej. "Desconocida" o un valor por defecto
         String anioNacStr = (anioDeNacimiento != null) ? String.valueOf(anioDeNacimiento) : "Desconocido";
         String anioFallStr = (anioDeFallecimiento != null) ? String.valueOf(anioDeFallecimiento) : "Desconocido";
 
-        // Construye la cadena final
         return new StringBuilder()
                 .append("Autor: ").append(nombre).append("\n")
                 .append("Fecha de nacimiento: ").append(anioNacStr).append("\n")

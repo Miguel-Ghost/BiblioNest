@@ -5,9 +5,10 @@ import com.uni.Literauni.repository.AutorRepository;
 import com.uni.Literauni.repository.LibroRepository;
 import com.uni.Literauni.service.ClienteApi;
 import com.uni.Literauni.service.ConvierteDatos;
-import jakarta.transaction.Transactional;
+
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
@@ -135,11 +136,23 @@ public class LibroMenu {
     }
 
     private void listarAutoresVivos() {
-        System.out.print("Escribe el año para buscar autores vivos: ");
-        int anio = teclado.nextInt();
-        teclado.nextLine();
+        int anio=0;
+        boolean entradaValida = false;
+
+        while (!entradaValida) {
+            try {
+                System.out.print("Escribe el año para buscar autores vivos: ");
+                anio = teclado.nextInt();
+                teclado.nextLine();
+                entradaValida = true;
+            } catch (InputMismatchException e) {
+                System.out.println("Por favor, ingresa un número válido.");
+                teclado.nextLine();
+            }
+        }
 
         var libros = libroRepositorio.findAll();
+        int finalAnio = anio;
         var autoresVivos = libros.stream()
                 .flatMap(libro -> libro.getAutores().stream())
                 .filter(autor -> {
@@ -155,7 +168,7 @@ public class LibroMenu {
                         anioFall = 0;
                     }
 
-                    return anioNac <= anio && (anioFall == 0 || anioFall > anio);
+                    return anioNac <= finalAnio && (anioFall == 0 || anioFall > finalAnio);
                 })
                 .distinct()
                 .toList();

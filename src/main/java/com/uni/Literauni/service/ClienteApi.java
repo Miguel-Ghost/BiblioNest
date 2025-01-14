@@ -1,7 +1,5 @@
 package com.uni.Literauni.service;
 
-import org.springframework.stereotype.Component;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;

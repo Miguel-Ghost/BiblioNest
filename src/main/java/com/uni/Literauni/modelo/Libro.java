@@ -85,7 +85,6 @@ public class Libro {
         this.autores = autores;
     }
 
-    // Agregar un autor y mantener la relación bidireccional
     public void addAutor(Autor autor) {
         if (!this.autores.contains(autor)) {
             this.autores.add(autor);
