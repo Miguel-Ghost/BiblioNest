@@ -42,7 +42,7 @@ public class LibroMenu {
                 teclado.next();
             }
             opcion = teclado.nextInt();
-            teclado.nextLine(); // Limpiar el buffer
+            teclado.nextLine();
 
             switch (opcion) {
                 case 1:
@@ -76,7 +76,7 @@ public class LibroMenu {
             return autoresExistentes.get();
         }
         var nuevoAutor = new Autor(datoAutor);
-        return autorRepositorio.saveAndFlush(nuevoAutor); // Asegura que se sincronice con el contexto
+        return autorRepositorio.saveAndFlush(nuevoAutor);
     }
 
 
