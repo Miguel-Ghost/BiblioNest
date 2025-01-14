@@ -61,13 +61,54 @@ Este proyecto es una aplicación **Java** construida con **Spring Boot** que per
 2. **Configurar la base de datos** en `src/main/resources/application.properties` (si no usas H2 en memoria).
 3. **Compilar** el proyecto con tu gestor de dependencias (Maven o Gradle).
 4. **Ejecutar** la aplicación:
-   ```bash
+     ```bash
    ./mvnw spring-boot:run
    # o
    ./gradlew bootRun
     ```
+<<<<<<< HEAD
 
 
 
 
+=======
+## Menú en consola
+Al iniciar, el sistema muestra un menú con opciones numeradas. Ingresa el número de la opción que deseas ejecutar.
+![image](https://github.com/user-attachments/assets/c62c3ec1-d764-422f-8c7a-87bb8784f6ba)
+
+## Uso de la aplicación (Menú por consola)
+1. **Buscar libro por título**
+Ingresa una palabra o frase, se realiza la consulta a Gutendex, y se registra el(los) libro(s) nuevo(s) en la base.
+
+2. **Listar libros registrados**
+Muestra todos los libros con título, idiomas, número de descargas y autores asociados.
+
+3. **Listar autores registrados**
+Muestra todos los autores sin duplicados.
+
+4. **Listar autores vivos en un año**
+Solicita un año y filtra autores que pudieran haber vivido en dicha fecha (basado en nacimiento/fallecimiento).
+
+5. **Listar libros por idioma**
+Muestra los libros que incluyan el idioma ingresado (ES, EN, FR, PT, etc.).
+También se muestra la cantidad total de libros encontrados en ese idioma.
+
+6. **Salir**
+Finaliza la aplicación.
+
+## Pruebas
+![image](https://github.com/user-attachments/assets/5d68af94-20ba-4266-bf27-08ddbd3ccdd6)
+
+
+![image](https://github.com/user-attachments/assets/5873ed03-df23-43f2-b501-a71e695dd446)
+
+
+![image](https://github.com/user-attachments/assets/1d009984-e899-4f27-9f68-45b5fd8ad3a3)
+
+
+![image](https://github.com/user-attachments/assets/93bee388-4e94-4c52-9651-71c40c616f3d)
+
+
+![image](https://github.com/user-attachments/assets/c0909d86-2d3b-43a7-be98-dccbbc21ed58)
+>>>>>>> c2b01d329f426a8a66579bf59140d81dc484855f
 
